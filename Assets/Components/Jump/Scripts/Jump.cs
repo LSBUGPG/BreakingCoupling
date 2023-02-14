@@ -5,9 +5,8 @@ using UnityEngine;
 public class Jump : MonoBehaviour
 {
     public Rigidbody physics;
-    public float force = 1.0f;
 
-    void DoJump()
+    public void DoJump(float force)
     {
         physics.AddForce(Vector3.up * force, ForceMode.Impulse);
     }

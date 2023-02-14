@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
+    public Jump jump;
+
     void Update()
     {
         if (Input.GetButtonDown("Jump"))
         {
-            SendMessage("DoJump");
+            jump.DoJump(5.0f);
+        }
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            jump.DoJump(10.0f);
         }
     }
 }
